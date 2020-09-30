@@ -188,10 +188,20 @@ body {
 .todo__list li span {
   display: inline-block;
   color: #d60000;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
 }
 
 .todo__list li span:hover {
   cursor: pointer;
   color: #a00000;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.line-through {
+  text-decoration: line-through;
+  -webkit-text-decoration-color: #d60000;
+          text-decoration-color: #d60000;
 }
 /*# sourceMappingURL=style.css.map */
