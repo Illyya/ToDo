@@ -22,7 +22,10 @@ addTask.onclick = function (e) {
         liFirst.append(deleteTask);
         input.value = '';
         deleteTask.onclick = function() {
-            liFirst.remove();
+            liFirst.classList.add('out');
+            setTimeout(() => {
+                liFirst.remove();               
+            }, 500);
         }
         done.onclick = function() {
             par.classList.toggle('line-through');            
@@ -33,7 +36,10 @@ deleteTasks.onclick = function (e) {
     e.preventDefault();
     let tasks = document.querySelectorAll('li');
     for (let i = 0; i < tasks.length; i++) {
-        tasks[i].remove();        
+        tasks[i].classList.add('out');
+        setTimeout(() => {
+            tasks[i].remove();               
+        }, 500);
     }    
 }
 
